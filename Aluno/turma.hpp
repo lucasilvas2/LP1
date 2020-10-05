@@ -13,6 +13,9 @@ private:
 	Aluno* alunos[CAPACIDADE_MAX]; // Array de alunos que serão incluidos na turma
 	int matriculados = 0;
 public:
+	Turma();
+	Turma(string nome, string id);
+	~Turma();
 	string getNome();
 	void setNome(string nome);
 	string getId();

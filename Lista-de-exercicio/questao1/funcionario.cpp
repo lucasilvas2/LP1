@@ -1,26 +1,47 @@
 #include "funcionario.hpp"
-Funcionario::Funcionario():nome("Estagiário"), salario(0.00), data_de_admissao("00/00/00"){
+using namespace std;
 
+Funcionario::Funcionario(){
+	this-> nome = "Indefinido";
+	this-> salario = 0.00;
 }
-Funcionario::Funcionario(string nome, double salario, string data_de_admissao):nome(nome),salario(salario), data_de_admissao(data_de_admissao){}
+
+Funcionario::Funcionario(string nome, double salario, date data_de_admissao):
+nome(nome),salario(salario), data_de_admissao(data_de_admissao){}
+
 Funcionario::~Funcionario(){
-	cout << "Funcionário " << this->getNome() << " foi demitido." << endl;
+	//cout << "Funcionário " << this->getNome() << " foi demitido." << endl;
 }
-string Funcionario::getNome(){
+
+string 
+Funcionario::getNome() const{
 	return this->nome;
 }
-void Funcionario::setNome(string nome){
-	this->nome = nome;
-}
-double Funcionario::getSalario(){
+
+double 
+Funcionario::getSalario() const{
 	return this-> salario;
 }
-void Funcionario::setSalario(double salario){
+
+void 
+Funcionario::setSalario(double salario){
 	this-> salario = salario;
 }
-string Funcionario::getDataDeAdmissao(){
+
+date
+Funcionario::getDataDeAdmissao() const{
 	return this-> data_de_admissao;
 }
-void Funcionario::setDataDeAdmissao(){
-	this-> data_de_admissao = data_de_admissao;
+
+bool 
+operator==(const Funcionario & lhs, const Funcionario & rhs){
+	return lhs.getNome() == rhs.getNome(); 
+	/*if(lhs.getNome() == rhs.getNome()){
+		return true;
+	}
+	else{
+		return false;
+	}
+}*/
+
 }

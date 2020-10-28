@@ -19,8 +19,8 @@ public:
 	int month()const;
 	int year()const;
 
-	void set_day(const int&d ay);
-	void set_month(const int &month);
+	void set_day(const int& day);
+	void set_month(const int& month);
 	void set_year(const int& year);
 	
 	date operator ++();//  prefix
@@ -30,12 +30,12 @@ public:
 };
 
 
-bool operator == (constdate&,constdate&);//  comparison  operators
-bool operator != (constdate&,constdate&);
-bool operator <(constdate&,constdate&);
-bool operator >(constdate&,constdate&);
-bool operator <= (constdate&,constdate&);
-bool operator >= (constdate&,constdate&);
+bool operator == (const date&,const date&);//  comparison  operators
+bool operator != (const date&,const date&);
+bool operator <(const date&,const date&);
+bool operator >(const date&,const date&);
+bool operator <= (const date&,const date&);
+bool operator >= (const date&,const date&);
 
-ostream& operator << (ostream& os,constdate& d);//  output  operator
+ostream& operator << (ostream& os,const date& d);//  output  operator
 #endif

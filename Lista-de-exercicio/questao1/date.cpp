@@ -142,7 +142,7 @@ inline string string_date(const date& d) {
 
 ostream& operator << (ostream& os, const date& d){
 	if (d.valid()) {
-	os << " " << long_date(d) << " " ; }
+	os << " " << string_date(d) << " " ; }
 	else {
 	os << " invalid date "; };
 	return os;

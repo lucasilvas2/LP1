@@ -9,7 +9,7 @@ using namespace std;
 class Empresa
 {
 private:
-	string nome_empresa;
+	string nome;
 	string cnpj;
 	Funcionario* funcionarios_empresa[CAPACIDADE_MAX];
 	int qtd_funcionarios = 0; 

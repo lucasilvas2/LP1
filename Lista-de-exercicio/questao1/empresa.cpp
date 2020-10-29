@@ -1,4 +1,4 @@
-#include "funcionario.hpp"
+#include "empresa.hpp"
 
 Empresa::Empresa(){}
 Empresa::Empresa(string nome, string cnpj):nome(nome),cnpj(cnpj){}
@@ -13,7 +13,7 @@ Empresa::getCnpj(){
 }
 int 
 Empresa::getQtdFuncionarios(){
-	return this-> qtd_funcionario;
+	return this-> qtd_funcionarios;
 }
 void 
 Empresa::addFuncionario(Funcionario* novo_funcionario){

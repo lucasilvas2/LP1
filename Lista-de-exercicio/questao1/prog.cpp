@@ -1,10 +1,12 @@
 #include <iostream>
-#include "funcionario.hpp"
+#include "empresa.hpp"
+
 
 using namespace std;
 
 
 int Funcionario::ativos = 0; 
+int Empresa::empresa_ativas = 0;
 
 int main(int argc, char const *argv[])
 {
@@ -19,8 +21,11 @@ int main(int argc, char const *argv[])
 		cout << "Diferentes " << endl;
 	}
 
+	Empresa* TEC = new Empresa("Tecnologia", "100");
+	TEC->addFuncionario(lucas);
+	TEC->addFuncionario(copia);
 	
-	cout << *lucas << endl;
+	TEC->listarFuncionario();
 
 	return 0;
 }

@@ -13,15 +13,18 @@ private:
 	string cnpj;
 	Funcionario* funcionarios_empresa[CAPACIDADE_MAX];
 	int qtd_funcionarios = 0; 
+	static int empresa_ativas;
 public:
 	Empresa();
 	Empresa(string nome, string cnpj);
 	~Empresa();
-	string getNomeEmpresa();
-	string getCnpj();
-	int getQtdFuncionarios();
+	string getNomeEmpresa() const;
+	string getCnpj() const;
+	int getQtdFuncionarios() const;
 	void addFuncionario(Funcionario* novo_funcionario);
 	void listarFuncionario();
+
+	static int getEmpresa_ativas();
 
 };
 #endif

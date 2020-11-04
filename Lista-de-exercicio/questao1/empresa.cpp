@@ -30,8 +30,23 @@ Empresa::getEmpresa_ativas(){
 }
 void 
 Empresa::listarFuncionario(){
-	for (int i = 0; i < this->qtd_funcionarios; ++i)
+	for (int i = 0; i < this-> qtd_funcionarios; ++i)
 	{
-		cout << this-> funcionarios_empresa[i]->getNome() << endl;
+		cout << *funcionarios_empresa[i] << endl;
 	}
+}
+double 
+Empresa::aumentoSalario(double porcentagem){
+	for (int i = 0; i < this-> qtd_funcionarios; ++i)
+	{
+		funcionarios_empresa[i]->setSalario((funcionarios_empresa[i]->getSalario() + (funcionarios_empresa[i]->getSalario() * porcentagem) / 100));
+	}
+	return 0;
+	//return funcionarios_empresa[0]->getSalario(); 
+	
+}
+
+ostream& operator <<(ostream &o, Empresa const e){
+	o << "Empresa: " << e.nome << " - "<< "CNPJ: " << e.cnpj;
+	return o;
 }

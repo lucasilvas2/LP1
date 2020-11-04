@@ -48,12 +48,4 @@ ostream& operator <<(ostream &o, Funcionario const f){
 bool 
 operator==(const Funcionario & lhs, const Funcionario & rhs){
 	return lhs.getNome() == rhs.getNome(); 
-	/*if(lhs.getNome() == rhs.getNome()){
-		return true;
-	}
-	else{
-		return false;
-	}
-}*/
-
 }

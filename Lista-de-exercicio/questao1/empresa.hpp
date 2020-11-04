@@ -23,8 +23,11 @@ public:
 	int getQtdFuncionarios() const;
 	void addFuncionario(Funcionario* novo_funcionario);
 	void listarFuncionario();
+	double aumentoSalario(double porcentagem);
 
 	static int getEmpresa_ativas();
+
+	friend ostream& operator << (ostream &o, Empresa const E);
 
 };
 #endif

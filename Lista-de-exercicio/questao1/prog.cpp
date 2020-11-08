@@ -27,5 +27,7 @@ int main(int argc, char const *argv[])
 	cout << "Aumento: " << endl;
 	TEC-> aumentoSalario(5);
 	TEC->listarFuncionario();
+
+	TEC->listarFuncionarioExperiencia(date(20,12,1998));
 	return 0;
 }

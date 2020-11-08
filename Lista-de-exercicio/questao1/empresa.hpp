@@ -24,6 +24,7 @@ public:
 	void addFuncionario(Funcionario* novo_funcionario);
 	void listarFuncionario();
 	double aumentoSalario(double porcentagem);
+	bool listarFuncionarioExperiencia(date referencia);
 
 	static int getEmpresa_ativas();
 

@@ -46,6 +46,20 @@ Empresa::aumentoSalario(double porcentagem){
 	
 }
 
+bool 
+Empresa::listarFuncionarioExperiencia(date referencia){
+	for (int i = 0; i < this-> qtd_funcionarios; ++i)
+	{
+		if(funcionarios_empresa[i]->getAdmissao() > referencia){
+			cout << *funcionarios_empresa[i] << endl;
+		}else{
+			cout << "Nenhum funcionário em experiência." << endl;
+			return false;
+		}
+	}
+	return true;
+}
+
 ostream& operator <<(ostream &o, Empresa const e){
 	o << "Empresa: " << e.nome << " - "<< "CNPJ: " << e.cnpj;
 	return o;

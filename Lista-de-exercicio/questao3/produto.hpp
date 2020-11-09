@@ -13,8 +13,8 @@ protected:
     double preco;
 
 public:
-    Produto(string nome, string descricao, double preco);
-    ~Produto();
+    Produto(string codigo, string descricao, double preco);
+    virtual ~Produto();
 
     string getCodigo() const;
     string getDescricao() const;
@@ -29,6 +29,8 @@ public:
     double operator+(const double& valor) const;
     double operator-(const double& valor) const;
     bool operator==(const Produto& produto) const;
-    friend ostream& operator<<(ostream& o, Produto& produto);
+    friend ostream& operator<<(ostream& o, Produto const &produto);
+private:
+    virtual ostream& print(ostream&) const = 0;
 };
 

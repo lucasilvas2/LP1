@@ -53,10 +53,11 @@ Produto::operator==(const Produto& produto) const{
     return this-> codigo == produto.codigo;
 
 }
-
-
-ostream& operator<<(ostream& o, Produto& produto){
+ostream& operator<<(ostream& o, const Produto& produto){
+    return produto.print(o);
+}
+/*ostream& operator<<(ostream& o, const Produto& produto){
     o << produto.codigo << " | " << setfill('.') << setw(30) << produto.descricao << " | R$: " << 
     setfill(' ') << setw(10) <<fixed << setprecision(2) << produto.preco;
     return o;
-}
+}*/

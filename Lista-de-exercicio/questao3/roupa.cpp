@@ -40,8 +40,8 @@ Roupa::print(ostream& o) const{
     o << this->codigo << " | " 
     << setfill('.') << setw(30) << this-> descricao 
     << " | R$: " << setfill(' ') << setw(10) <<fixed << setprecision(2) << this-> preco
-    << " | " << setfill(' ') << setw(10) << this-> marca
-    << " | " << setfill(' ') << setw(10) << this-> sexo
-    << " | " << setfill(' ') << setw(10) << this-> tam; 
+    << " | " << setfill(' ') << setw(18) << this-> marca
+    << " | " << setfill(' ') << setw(18) << this-> sexo
+    << " | " << setfill(' ') << setw(18) << this-> tam; 
     return o;
 }
